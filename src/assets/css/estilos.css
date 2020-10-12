@@ -1,0 +1,168 @@
+body {
+  font-size: 14px;
+  font-family: Raleway;
+  color: #333333;
+  background-color: #f6f7fb;
+}
+.cabecera {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.boton1 {
+  -webkit-box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border: 0;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 1em;
+  min-height: 98px;
+}
+
+.card {
+  -webkit-box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.051);
+  margin-bottom: 30px;
+  border: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.025);
+  border-radius: 0.25rem;
+}
+.card .card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 50px;
+}
+.card .card-header h5 {
+  font-size: 18px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.card .card-header .card-header-right {
+  border-radius: 0 0 0 7px;
+  right: 20px;
+  top: 23px;
+  display: inline-block;
+  float: right;
+  padding: 7px 0;
+  position: absolute;
+}
+.card .card-header .card-header-right .card-option {
+  text-align: right;
+  width: 35px;
+  height: 20px;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.card .card-header .card-header-right .card-option li {
+  display: inline-block;
+}
+
+.boton1:hover,
+.boton1.router-link-active,
+.boton1.router-link-exact-active {
+  background-color: indianred;
+  cursor: pointer;
+}
+
+.loterianacional .boton1 {
+  background: url(../images/logos/loteria.svg) center no-repeat;
+}
+
+.loterianacional .boton1:hover,
+.loterianacional .boton1.router-link-active,
+.loterianacional .boton1.router-link-exact-active {
+  background: #3378b3 url(../images/logos/loteria-blanco.png) center no-repeat;
+}
+.bonoloto .boton1 {
+  background: url(../images/logos/bonoloto.svg) center no-repeat;
+}
+.bonoloto .boton1:hover,
+.bonoloto .boton1.router-link-active,
+.bonoloto .boton1.router-link-exact-active {
+  background: #7a8634 url(../images/logos/bonoloto-blanco.png) center no-repeat;
+}
+.primitiva .boton1 {
+  background: url(../images/logos/primitiva.svg) center no-repeat;
+}
+.primitiva .boton1:hover,
+.primitiva .boton1.router-link-active,
+.primitiva .boton1.router-link-exact-active {
+  background: #008547 url(../images/logos/primitiva-blanco.png) center no-repeat;
+}
+.gordoprimitiva .boton1 {
+  background: url(../images/logos/gordo.svg) center no-repeat;
+}
+.gordoprimitiva .boton1:hover,
+.gordoprimitiva .boton1.router-link-active,
+.gordoprimitiva .boton1.router-link-exact-active {
+  background: #dc3f47 url(../images/logos/gordo-blanco.png) center no-repeat;
+}
+.euromillones .boton1 {
+  background: url(../images/logos/euromillones.svg) center no-repeat;
+}
+.euromillones .boton1:hover,
+.euromillones .boton1.router-link-active,
+.euromillones .boton1.router-link-exact-active {
+  background: #153f69 url(../images/logos/euromillones-blanco.png) center
+    no-repeat;
+}
+.quiniela .boton1 {
+  background: url(../images/logos/quiniela.svg) center no-repeat;
+}
+.quiniela .boton1:hover,
+.quiniela .boton1.router-link-active,
+.quiniela .boton1.router-link-exact-active {
+  background: #cb1517 url(../images/logos/quiniela-blanco.png) center no-repeat;
+}
+.quinigol .boton1 {
+  background: url(../images/logos/quinigol.svg) center no-repeat;
+}
+.quinigol .boton1:hover,
+.quinigol .boton1.router-link-active,
+.quinigol .boton1.router-link-exact-active {
+  background: #79cfdd url(../images/logos/quinigol-blanco.png) center no-repeat;
+}
+
+.lototurf .boton1 {
+  background: url(../images/logos/lototurf.svg) center no-repeat;
+}
+.lototurf .boton1:hover,
+.lototurf .boton1.router-link-active,
+.lototurf .boton1.router-link-exact-active {
+  background: #d16929 url(../images/logos/lototurf-blanco.png) center no-repeat;
+}
+.quintupleplus .boton1 {
+  background: url(../images/logos/quintuple.svg) center no-repeat;
+}
+.quintupleplus .boton1:hover,
+.quintupleplus .boton1.router-link-active,
+.quintupleplus .boton1.router-link-exact-active {
+  background: #eab842 url(../images/logos/quintuple-blanco.png) center no-repeat;
+}
