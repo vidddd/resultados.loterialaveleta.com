@@ -1,8 +1,17 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 14px;
-  font-family: Raleway;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #333333;
   background-color: #f6f7fb;
+}
+a {
+  color: #444;
+  text-decoration: none;
 }
 .cabecera {
   padding-top: 30px;
@@ -31,7 +40,7 @@ body {
 .card {
   -webkit-box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.051);
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   border: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -52,43 +61,60 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.025);
   border-radius: 0.25rem;
 }
-.card .card-header {
+.card-header {
   background-color: #fff;
   border-bottom: 1px solid #eeeeee;
   padding: 10px 50px;
 }
-.card .card-header h5 {
-  font-size: 18px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.card .card-header .card-header-right {
-  border-radius: 0 0 0 7px;
-  right: 20px;
-  top: 23px;
-  display: inline-block;
-  float: right;
-  padding: 7px 0;
-  position: absolute;
-}
-.card .card-header .card-header-right .card-option {
-  text-align: right;
-  width: 35px;
-  height: 20px;
+.wrapper-fechas {
+  max-width: 94%;
   overflow: hidden;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-.card .card-header .card-header-right .card-option li {
-  display: inline-block;
+  margin: 15px auto;
+  width: 95%;
 }
 
-.boton1:hover,
-.boton1.router-link-active,
-.boton1.router-link-exact-active {
-  background-color: indianred;
+.list-fechas {
+  list-style: none;
+  display: flex;
+}
+
+.list-fechas a {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 20px;
+  margin: 0 20px;
+  width: 250px;
+  flex-shrink: 0;
+  height: 100%;
+  font-weight: bold;
+}
+
+ul.list-fechas li a {
+  text-decoration: none;
+}
+
+.botonantsig {
   cursor: pointer;
+  width: auto;
+  padding: 6px 25px;
+  font-weight: bold;
+  font-size: 36px;
+  transition: 0.7s ease;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  user-select: none;
+}
+.anterior {
+  position: absolute;
+  top: 25%;
+  left: 20px;
+}
+.siguiente {
+  position: absolute;
+  top: 20%;
+  right: 20px;
 }
 
 .loterianacional .boton1 {
@@ -99,6 +125,12 @@ body {
 .loterianacional .boton1.router-link-active,
 .loterianacional .boton1.router-link-exact-active {
   background: #3378b3 url(../images/logos/loteria-blanco.png) center no-repeat;
+}
+.resultado-loterianacional .botonantsig:hover,
+.resultado-loterianacional .botonfecha:hover,
+.resultado-loterianacional .botonfecha.router-link-active {
+  background: #3378b3;
+  color: #fff;
 }
 .bonoloto .boton1 {
   background: url(../images/logos/bonoloto.svg) center no-repeat;
@@ -111,10 +143,22 @@ body {
 .primitiva .boton1 {
   background: url(../images/logos/primitiva.svg) center no-repeat;
 }
+.resultado-bonoloto .botonantsig:hover,
+.resultado-bonoloto .botonfecha:hover,
+.resultado-bonoloto .botonfecha.router-link-active {
+  background: #7a8634;
+  color: #fff;
+}
 .primitiva .boton1:hover,
 .primitiva .boton1.router-link-active,
 .primitiva .boton1.router-link-exact-active {
   background: #008547 url(../images/logos/primitiva-blanco.png) center no-repeat;
+}
+.resultado-primitiva .botonantsig:hover,
+.resultado-primitiva .botonfecha:hover,
+.resultado-primitiva .botonfecha.router-link-active {
+  background: #008547;
+  color: #fff;
 }
 .gordoprimitiva .boton1 {
   background: url(../images/logos/gordo.svg) center no-repeat;
@@ -123,6 +167,12 @@ body {
 .gordoprimitiva .boton1.router-link-active,
 .gordoprimitiva .boton1.router-link-exact-active {
   background: #dc3f47 url(../images/logos/gordo-blanco.png) center no-repeat;
+}
+.resultado-gordoprimitiva .botonantsig:hover,
+.resultado-gordoprimitiva .botonfecha:hover,
+.resultado-gordoprimitiva .botonfecha.router-link-active {
+  background: #dc3f47;
+  color: #fff;
 }
 .euromillones .boton1 {
   background: url(../images/logos/euromillones.svg) center no-repeat;
@@ -133,6 +183,12 @@ body {
   background: #153f69 url(../images/logos/euromillones-blanco.png) center
     no-repeat;
 }
+.resultado-euromillones .botonantsig:hover,
+.resultado-euromillones .botonfecha:hover,
+.resultado-euromillones .botonfecha.router-link-active {
+  background: #153f69;
+  color: #fff;
+}
 .quiniela .boton1 {
   background: url(../images/logos/quiniela.svg) center no-repeat;
 }
@@ -141,6 +197,12 @@ body {
 .quiniela .boton1.router-link-exact-active {
   background: #cb1517 url(../images/logos/quiniela-blanco.png) center no-repeat;
 }
+.resultado-quiniela .botonantsig:hover,
+.resultado-quiniela .botonfecha:hover,
+.resultado-quiniela .botonfecha.router-link-active {
+  background: #cb1517;
+  color: #fff;
+}
 .quinigol .boton1 {
   background: url(../images/logos/quinigol.svg) center no-repeat;
 }
@@ -148,6 +210,12 @@ body {
 .quinigol .boton1.router-link-active,
 .quinigol .boton1.router-link-exact-active {
   background: #79cfdd url(../images/logos/quinigol-blanco.png) center no-repeat;
+}
+.resultado-quinigol .botonantsig:hover,
+.resultado-quinigol .botonfecha:hover,
+.resultado-quinigol .botonfecha.router-link-active {
+  background: #79cfdd;
+  color: #fff;
 }
 
 .lototurf .boton1 {
@@ -158,6 +226,12 @@ body {
 .lototurf .boton1.router-link-exact-active {
   background: #d16929 url(../images/logos/lototurf-blanco.png) center no-repeat;
 }
+.resultado-lototurf .botonantsig:hover,
+.resultado-lototurf .botonfecha:hover,
+.resultado-lototurf .botonfecha.router-link-active {
+  background: #d16929;
+  color: #fff;
+}
 .quintupleplus .boton1 {
   background: url(../images/logos/quintuple.svg) center no-repeat;
 }
@@ -165,4 +239,10 @@ body {
 .quintupleplus .boton1.router-link-active,
 .quintupleplus .boton1.router-link-exact-active {
   background: #eab842 url(../images/logos/quintuple-blanco.png) center no-repeat;
+}
+.resultado-quintupleplus .botonantsig:hover,
+.resultado-quintupleplus .botonfecha:hover,
+.resultado-quintupleplus .botonfecha.router-link-active {
+  background: #eab842;
+  color: #fff;
 }

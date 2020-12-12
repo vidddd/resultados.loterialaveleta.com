@@ -23,11 +23,12 @@
 <script>
 import Cabecera from "./components/Cabecera.vue";
 import Menu from "./components/Menu.vue";
+
 export default {
   name: "app",
   components: {
     Cabecera,
-    Menu,
+    Menu
   },
   data() {
     return {};

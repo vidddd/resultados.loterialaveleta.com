@@ -1,22 +1,25 @@
 <template>
-  <div class="resultado">
+  <div class="resultado resultado-loterianacional">
     <div class="row">
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <div class="card-header-right">
-                 <ul class="list-unstyled card-option">
-                     <li>Sorteo 1</li>
-                     <li>Sorteo 2</li>
-                     <li>Sorteo 33</li>
-                     <li>Sorteo 44</li>
-                     <li>Sorteo 5</li>
-                     <li>Sorteo 6</li>
-                     <li>Sorteo 7</li>
-                 </ul>
-             </div>
+            <div class="wrapper-fechas">
+                <div class="list-fechas">
+                     <router-link v-for="(item, index) in sorteos" 
+                                  :to="{ name: 'ResultadoLoterianacional', params: { id: item.id }  }"
+                                  class="botonfecha">{{ item.fecha | formatFecha }}</router-link>
+                  </div>
+                </div>
+                <div @click="scroll_left" class="botonantsig anterior">&lt;</div>
+                <div @click="scroll_right" class="botonantsig siguiente">&gt;</div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <router-view></router-view>
       </div>
     </div>
   </div>
@@ -24,8 +27,34 @@
 
 <script>
 export default {
-  mounted() {
-    //console.log('Component mounted.')
+  data: function() {
+    return {
+      sorteos: {}
+    }
   },
+  mounted: function() {
+    // Alias the component instance as `vm`, so that we can access it inside the promise function
+    const vm = this
+    fetch('https://loterialaveleta.com/sorteos/ultimossorteos/LNAC')
+      .then(function(response) {
+       return response.json()
+      })
+      .then(function(data) {
+        vm.$data.sorteos = data
+      })
+  },
+  methods: {
+    scroll_left() {
+      let content = document.querySelector(".wrapper-fechas")
+      content.scrollLeft -= 200
+    },
+    scroll_right() {
+      let content = document.querySelector(".wrapper-fechas")
+      content.scrollLeft += 200
+    },
+    goBack(){
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+    }
+  }
 };
 </script>

@@ -1,8 +1,17 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
+import moment from 'moment';
+
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
+
+Vue.filter('formatFecha', value => {
+ if (value) {
+        moment.locale('es');
+        return moment(String(value)).format('dddd D / MMMM').toUpperCase()
+    }
+})
 
 import "./assets/css/bootstrap-grid.min.css";
 import "./assets/css/estilos.css";
@@ -17,18 +26,73 @@ import Quiniela from "./components/resultados/Quiniela.vue";
 import Quinigol from "./components/resultados/Quinigol.vue";
 import Lototurf from "./components/resultados/Lototurf.vue";
 import QuintuplePlus from "./components/resultados/QuintuplePlus.vue";
+import Resultado from "./components/Resultado.vue";
 
 const routes = [
   { path: "/", component: Inicio },
-  { path: "/loterianacional", component: LoteriaNacional },
-  { path: "/bonoloto", component: Bonoloto },
-  { path: "/primitiva", component: Primitiva },
-  { path: "/gordoprimitiva", component: GordoPrimitiva },
-  { path: "/euromillones", component: Euromillones },
-  { path: "/quiniela", component: Quiniela },
-  { path: "/quinigol", component: Quinigol },
-  { path: "/lototurf", component: Lototurf },
-  { path: "/quintupleplus", component: QuintuplePlus }
+  { path: "/loterianacional", component: LoteriaNacional ,
+                children: [{
+                  name: 'ResultadoLoterianacional',
+                  path: '/loterianacional/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/bonoloto", component: Bonoloto ,
+                children: [{
+                  name: 'ResultadoBonoloto',
+                  path: '/bonoloto/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/primitiva", component: Primitiva ,
+                children: [{
+                  name: 'ResultadoPrimitiva',
+                  path: '/primitiva/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/gordoprimitiva", component: GordoPrimitiva ,
+                children: [{
+                  name: 'ResultadoGordoprimitiva',
+                  path: '/gordoprimitiva/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/euromillones", component: Euromillones ,
+                children: [{
+                  name: 'ResultadoEuromillones',
+                  path: '/euromillones/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/quiniela", component: Quiniela ,
+                children: [{
+                  name: 'ResultadoQuiniela',
+                  path: '/quiniela/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/quinigol", component: Quinigol ,
+                children: [{
+                  name: 'ResultadoQuinigol',
+                  path: '/quinigol/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/lototurf", component: Lototurf ,
+                children: [{
+                  name: 'ResultadoLototurf',
+                  path: '/lototurf/resultado/:id',
+                  component: Resultado
+                }],
+  },
+  { path: "/quintupleplus", component: QuintuplePlus ,
+                children: [{
+                  name: 'ResultadoQuintupleplus',
+                  path: '/quintupleplus/resultado/:id',
+                  component: Resultado
+                }],
+  }
 ];
 
 const router = new VueRouter({
