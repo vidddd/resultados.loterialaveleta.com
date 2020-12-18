@@ -1,6 +1,7 @@
 # resultados.loterialaveleta.com
 
 > Pantalla de Resultados de Loteria La Veleta
-> Develop in Vuejs
+
+<p> Develop in Vuejs </p>
 
 <img src="http://resultados.loterialaveleta.com/pantalla-resultados.png"  />

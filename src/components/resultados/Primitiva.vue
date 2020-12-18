@@ -7,6 +7,8 @@
                 <div class="wrapper-fechas">
                    <div class="list-fechas">
                      <router-link v-for="(item, index) in sorteos" 
+                                  :data="sorteos"
+                                  :key="index"
                                   :to="{ name: 'ResultadoPrimitiva', params: { id: item.id }  }"
                                   class="botonfecha">{{ item.fecha | formatFecha }}</router-link>
                   </div>

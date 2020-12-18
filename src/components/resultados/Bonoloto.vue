@@ -6,7 +6,9 @@
           <div class="card-header">
             <div class="wrapper-fechas">
                   <div class="list-fechas">
-                     <router-link v-for="(item, index) in sorteos" 
+                     <router-link v-for="(item, index) in sorteos"
+                                  :data="sorteos"
+                                  :key="index"
                                   :to="{ name: 'ResultadoBonoloto', params: { id: item.id }  }"
                                   class="botonfecha">{{ item.fecha | formatFecha }}</router-link>
                   </div>
