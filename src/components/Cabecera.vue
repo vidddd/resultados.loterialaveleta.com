@@ -5,6 +5,7 @@
       <div class="col-lg-3">
         <img
           alt="La Veleta"
+          style="width:200px;"
           src="../assets/images/logo-loteria-la-veleta.svg"
         />
       </div>

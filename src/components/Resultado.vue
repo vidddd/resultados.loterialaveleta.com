@@ -2,12 +2,12 @@
   <div class="resultado resultado-inicio">
         <div class="card">
           <div class="card-header">
-            <!--<h6>{{ $route.params.id }}</h6> -->
              <embed
-                :src=" urlPdf "
+                :src="urlPdf"
                 type="applic ation/pdf"
                 width="100%"
-                height="1000px"
+                height="800px"
+                id="pdfembed"
               />
         </div>
     </div>
