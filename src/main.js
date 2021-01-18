@@ -2,9 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
 import moment from 'moment';
-
-
-Vue.config.productionTip = false;
+var numeral = require('numeral') //http://numeraljs.com/
 Vue.use(VueRouter);
 
 Vue.filter('formatFecha', value => {
@@ -12,6 +10,19 @@ Vue.filter('formatFecha', value => {
         moment.locale('es');
         return moment(String(value)).format('dddd D / MMMM').toUpperCase()
     }
+})
+Vue.filter('formatBote', value => {
+  let number = numeral(value)
+  // no hay bote
+  if(number.value() === null)
+  {
+    return '<span class="nohaybote">No hay Bote</span>'
+  } else {
+    if (number._value > 999999)
+      return number.divide('1000000')._value + ' <span class="millones">millones €</span>'
+    else return number.format('0,0') + ' <span>€</span>'
+  }
+
 })
 
 import "./assets/css/bootstrap-grid.min.css";

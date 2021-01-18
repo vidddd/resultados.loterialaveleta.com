@@ -5,3 +5,5 @@
 <p> Develop in Vuejs </p>
 
 <img src="http://resultados.loterialaveleta.com/pantalla-resultados.png"  />
+<br/>
+<img src="http://resultados.loterialaveleta.com/pantalla-resultados-botes-laveleta.png"  />

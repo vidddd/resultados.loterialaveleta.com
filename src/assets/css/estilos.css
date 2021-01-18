@@ -116,7 +116,6 @@ ul.list-fechas li a {
   top: 20%;
   right: 20px;
 }
-
 .loterianacional .boton1 {
   background: url(../images/logos/loteria.svg) center no-repeat;
 }
@@ -217,7 +216,6 @@ ul.list-fechas li a {
   background: #79cfdd;
   color: #fff;
 }
-
 .lototurf .boton1 {
   background: url(../images/logos/lototurf.svg) center no-repeat;
 }
@@ -263,4 +261,70 @@ ul.list-fechas li a {
 #pdfembed::-webkit-scrollbar-thumb:vertical {
   height: 30px;
   background-color: #0a4c95;
+}
+.card .card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 50px;
+}
+.card .card-header h5 {
+  font-size: 18px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.card .card-body {
+  padding: 30px;
+}
+
+.botes .euromillones {
+  color: #153f69;
+}
+.botes .bonoloto {
+  color: #7a8634;
+}
+.botes .primitiva {
+  color: #008547;
+}
+.botes .gordo {
+  color: #dc3f47;
+}
+.botes .quiniela {
+  color: #cb1517;
+}
+.botes .quinigol {
+  color: #79cfdd;
+}
+.botes .lototurf {
+  color: #d16929;
+}
+.botes .quintuple-plus {
+  color: #eab842;
+}
+.botes .col {
+  vertical-align: middle;
+}
+.botes .card h4 {
+  font-size: 20px;
+  padding-left:40px;
+  font-weight: 900;
+  font-style: italic;
+}
+.botes .botenum {
+ margin:15px;
+ font-size: 56px;
+}
+.botes .botenum span.millones {
+  font-size: 30px;
+}
+.botes .cuenta-atras {
+  color: rgb(107, 105, 105);
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.card-bote {
+  margin-bottom: 2rem;
+}
+.nohaybote {
+  font-size: 14px;
 }
